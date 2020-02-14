@@ -1,2 +1,2 @@
 # DD-Resume
-My Resume.
+My Resume for personal use.
