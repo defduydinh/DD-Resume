@@ -1,0 +1,68 @@
+
+
+\documentclass{resume} % Use the custom resume.cls style
+
+
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\newcolumntype{H}{>{\Huge}l}
+
+% \name{Duy Dinh T.}
+% \address{Permanent residence: Austin, Texas 78753}
+% \address{(512)893-9661 \\ dinhduy23@gmail.com}
+
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{multirow}
+
+\begin{document}
+
+\begin{tabularx}{\textwidth}{>{\Huge} X l l}
+    \multirow{3}{*}{\bf{Duy Dinh T.}}  & Phone: & (512)-893-9661\\
+                                & Email: & defduydinh@gmail.com\\
+                                & Git: &dtd170004\\
+
+\end{tabularx}
+
+\begin{rSection}{Education}
+    \begin{rSubsection}{University of Texas at Dallas}{Anticipated graduation: May 2021}{}
+        \item Major: Computer Science - Cybersecurity / Information Technology \hfill GPA: 3.40
+    \end{rSubsection}
+
+\end{rSection}
+
+\begin{rSection}{Skills}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{1cm}} l } \itemsep1em
+    Programming: \ & C++, Java, JavaScript, Python, LaTeX.\\
+    Libraries: \ & Python Requests, BeautifulSoup; C++ Inotify, TCLAP, Lex, Bison.  \\
+    Additional skill: \ & Bilingual, fluent in English and Vietnamese.\\
+    \quad \ & Experienced with computer hardware assembly and diagnostic.\\
+\end{tabular}
+
+\end{rSection}
+
+\begin{rSection}{Projects}
+    \begin{rSubsection}{Financial Data Calculation and Analysis}{Jan 2020 - Present}{Personal Project}{}
+        \item 
+        \item 
+    \end{rSubsection}
+    
+    \begin{rSubsection}{10-K Data Extraction for Data Analysis}{May 2019 - Aug 2019}{Personal Project}{}
+        \item
+    \end{rSubsection}
+    
+    \begin{rSubsection}{Daemon Information Logger}{Apr 2019 - May 2019}{UNIX Class}{}
+        \item Create a running daemon process to monitor and log actions of a watch folder.
+        \item The project utilize Inotify kernel subsystem along with fork and exec commands in C++ to create a daemon child from parent function. After daemon started, it will go into idle mode while monitor watch directory.
+        \item 
+    \end{rSubsection}
+\end{rSection}
+
+
+\begin{rSection}{Academic Organization} 
+    UT-Dallas Computer Security Group.
+\end{rSection}
+
+\end{document}
