@@ -3,7 +3,7 @@
 \documentclass{resume} % Use the custom resume.cls style
 
 
-\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\usepackage[left=0.75in,top=0.0in,right=0.75in,bottom=0.3in]{geometry} % Document margins
 \newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
 \newcolumntype{H}{>{\Huge}l}
@@ -36,27 +36,30 @@
 
 \begin{tabular}{ @{} >{\bfseries}l @{\hspace{1cm}} l } \itemsep1em
     Programming: \ & C++, Java, JavaScript, Python, LaTeX.\\
-    Libraries: \ & Python Requests, BeautifulSoup; C++ Inotify, TCLAP, Lex, Bison.  \\
+    Libraries: \ & Python Requests, JSON; C++ Inotify, TCLAP, Lex, Bison.  \\
     Additional skill: \ & Bilingual, fluent in English and Vietnamese.\\
-    \quad \ & Experienced with computer hardware assembly and diagnostic.\\
+    \quad \ & Experienced with computer hardware assembly and quick system diagnostic.\\
 \end{tabular}
 
 \end{rSection}
 
 \begin{rSection}{Projects}
     \begin{rSubsection}{Financial Data Calculation and Analysis}{Jan 2020 - Present}{Personal Project}{}
-        \item 
-        \item 
+        \item Successor of 10-K Data project. A different approach to acquire and compute data for company financial filing. Previous project has flaws of inconsistence between company's reports and extracting data takes too long or timed out on a regular basis.
+        \item Project utilizes Yahoo Finance API from Rapid-API to acquire bulk data of a company financial status. Finance API returns a JSON package for script to extract and store important data.
+        \item The project utilizes JSON and Requests for majority of communication between script and Rapid-API server. Mathematical operations are performed locally to obtain important financial data.
     \end{rSubsection}
     
-    \begin{rSubsection}{10-K Data Extraction for Data Analysis}{May 2019 - Aug 2019}{Personal Project}{}
-        \item
+    \begin{rSubsection}{10-K Data Extraction for Data Analysis}{Jun 2019 - Aug 2019}{Personal Project}{}
+        \item A simple Python script to extract data from 10-K data from company's financial report.
+        \item The script extracts data using BeautifulSoup library. It first parse the PDF, then find certain keywords and the subsequent data. Data are then computed to form a comprehensive set of data for analyzing company financial status.
+        \item The project utilize BeautifulSoup to perform majority of large data parsing.
     \end{rSubsection}
     
     \begin{rSubsection}{Daemon Information Logger}{Apr 2019 - May 2019}{UNIX Class}{}
-        \item Create a running daemon process to monitor and log actions of a watch folder.
-        \item The project utilize Inotify kernel subsystem along with fork and exec commands in C++ to create a daemon child from parent function. After daemon started, it will go into idle mode while monitor watch directory.
-        \item 
+        \item Create a daemon, a background process, to monitor and log actions in a watch-folder.
+        \item The process can operate as a parent and output real-time actions to console and record the output in a log directory. With a daemon option, the parent process creates a child process and self-terminate. The child process is now a daemon with the responsibility of watching a directory and logging actions. Daemon will terminate if the user sends a SIGNAL to force terminate or safely terminate. 
+        \item The project utilizes Inotify kernel subsystem to wake up daemon and begin logging informations. The fork and exec commands in C are used to create a daemon child from the parent process.
     \end{rSubsection}
 \end{rSection}
 
