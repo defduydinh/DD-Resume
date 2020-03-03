@@ -1,0 +1,75 @@
+
+
+\documentclass{resume} % Use the custom resume.cls style
+
+
+\usepackage[left=0.75in,top=0.0in,right=0.75in,bottom=0.3in]{geometry} % Document margins
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\newcolumntype{H}{>{\Huge}l}
+
+% \name{Duy Dinh T.}
+% \address{Permanent residence: Austin, Texas 78753}
+% \address{(512)893-9661 \\ dinhduy23@gmail.com}
+
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{multirow}
+
+\begin{document}
+
+\begin{tabularx}{\textwidth}{>{\Huge} X l l}
+    \multirow{3}{*}{\bf{Duy Dinh T.}}  & Phone: & (512)-893-9661\\
+                                & Email: & defduydinh@gmail.com\\
+                                & Git: &dtd170004\\
+
+\end{tabularx}
+
+\begin{rSection}{Education}
+    \begin{rSubsection}{University of Texas at Dallas}{Anticipated graduation: May 2021}{}
+        \item Major: Computer Science - Cybersecurity / Information Technology \hfill GPA: 3.40
+    \end{rSubsection}
+
+\end{rSection}
+
+\begin{rSection}{Skills}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{1cm}} l } \itemsep1em
+    Programming: \ & C++, Java, JavaScript, Python, LaTeX.\\
+    Libraries: \ & Python Requests, JSON; C++ Inotify, TCLAP, Lex, Bison.  \\
+    Additional skill: \ & Bilingual, fluent in English and Vietnamese.\\
+    \quad \ & Experienced with computer hardware assembly and quick system diagnostic.\\
+\end{tabular}
+
+\end{rSection}
+
+\begin{rSection}{Projects}
+    \begin{rSubsection}{Financial Data Calculation and Analysis}{Jan 2020 - Present}{Personal Project}{}
+        \item Successor of 10-K Data project. A different approach to acquire and compute data for company financial filing. The previous project has flaws of inconsistency between the company's reports and extracting data takes too long or timed out on a regular basis.
+        \item Project utilizes Yahoo Finance API from Rapid-API to acquire bulk data of a company's financial status. Finance API returns a JSON package for the script to extract and store important data.
+        \item The project utilizes JSON and Requests for the majority of communication between script and Rapid-API server. Mathematical operations are performed locally to obtain important financial data.
+    \end{rSubsection}
+    
+    \begin{rSubsection}{10-K Data Extraction for Data Analysis}{Jun 2019 - Aug 2019}{Personal Project}{}
+        \item A simple Python script to extract data from 10-K data from company's financial report.
+        \item The script extracts data using BeautifulSoup library. It first parse the PDF, then find certain keywords and the subsequent data. Data are then computed to form a comprehensive set of data for analyzing company financial status.
+        \item The project utilize BeautifulSoup to perform majority of large data parsing.
+    \end{rSubsection}
+    
+    \begin{rSubsection}{Daemon Information Logger}{Apr 2019 - May 2019}{UNIX Class}{}
+        \item Create a daemon, a background process, to monitor and log actions in a watch-folder.
+        \item The process can operate as a parent and output real-time actions to console and record the output in a log directory. With a daemon option, the parent process creates a child process and self-terminate. The child process is now a daemon with the responsibility of watching a directory and logging actions. Daemon will terminate if the user sends a SIGNAL to force terminate or safely terminate. 
+        \item The project utilizes Inotify kernel subsystem to wake up daemon and begin logging informations. The fork and exec commands in C are used to create a daemon child from the parent process.
+    \end{rSubsection}
+\end{rSection}
+
+\begin{rSection}{Relevant I.T. experience}
+    \item Assembled 6 computers using off-shelf hardware components.
+    \item Succesful upgrade storage of PCs in a lab.
+\end{rSection}
+
+\begin{rSection}{Academic Organization} 
+    UT-Dallas Computer Security Group.
+\end{rSection}
+
+\end{document}
